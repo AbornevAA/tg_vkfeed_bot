@@ -12,7 +12,6 @@ logging.basicConfig(level=logging.INFO)
 TG_API_TOKEN = os.getenv("TG_API_TOKEN")
 VK_API_TOKEN = os.getenv("VK_API_TOKEN")
 ACCESS_ID = os.getenv("TG_USER_ID")
-PYTHONANYWHERE_PROXY_URL = "https://proxy.server:3128"
 
 PROXY_URL = os.getenv("http_proxy")
 
