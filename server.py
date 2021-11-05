@@ -55,7 +55,7 @@ async def refresh_news_feed(seconds_ago: int = 30):
                 else:
                     group = vk_api.get_group(VK_API_TOKEN, post['source_id'])
                     source_name = group['name']
-                message_text = '{post["text"][:120]}...' if len(post['text']) > 120 else post['text']
+                message_text = f'{post["text"][:120]}...' if len(post['text']) > 120 else post['text']
                 message_text = f'{source_name}\n\n' + message_text
 
             markup = InlineKeyboardMarkup()
