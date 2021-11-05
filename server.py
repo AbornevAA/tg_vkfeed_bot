@@ -14,9 +14,9 @@ VK_API_TOKEN = os.getenv("VK_API_TOKEN")
 ACCESS_ID = os.getenv("TG_USER_ID")
 PYTHONANYWHERE_PROXY_URL = "https://proxy.server:3128"
 
-proxy_url = PYTHONANYWHERE_PROXY_URL if os.getenv('PYTHONANYWHERE_DOMAIN') else None
+PROXY_URL = os.getenv("http_proxy")
 
-bot = Bot(token=TG_API_TOKEN, proxy=proxy_url)
+bot = Bot(token=TG_API_TOKEN, proxy=PROXY_URL)
 loop = asyncio.get_event_loop()
 dp = Dispatcher(bot, loop=loop)
 dp.middleware.setup(AccessMiddleware(int(ACCESS_ID)))
