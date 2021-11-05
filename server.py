@@ -30,7 +30,7 @@ async def get_last_news(seconds_ago: int = 30):
             await bot.send_message(ACCESS_ID, link,
                                    disable_web_page_preview=False)
 
-        await asyncio.sleep(30)
+        await asyncio.sleep(seconds_ago)
 
 
 if __name__ == '__main__':
